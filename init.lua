@@ -63,7 +63,7 @@ require("config.usercmd")
 --------------------- Other Stuff ---------------------------
 -- Check if mason tools have been installed
 -- Check if the file exists
-local filename = vim.fn.stdpath("data") .. "mason_tools_installed"
+local filename = vim.fn.stdpath("data") .. "/mason_tools_installed"
 local file = io.open(filename, "r")
 if file then
 	-- File exists, close it
@@ -80,14 +80,15 @@ else
 	end
 end
 -------------------------------------------------------------
-local parsers = require("nvim-treesitter.parsers")
-local install = require("nvim-treesitter.install")
-
-local wanted = { "python", "markdown", "markdown_inline" }
-
-for _, lang in ipairs(wanted) do
-	local parser_config = parsers.get_parser_configs()[lang]
-	if parser_config and not parsers.has_parser(lang) then
-		install.commands.TSInstall(lang)
-	end
-end
+-- local parsers = require("nvim-treesitter.parsers")
+-- local install = require("nvim-treesitter.install")
+--
+-- local wanted = { "python", "markdown", "markdown_inline" }
+--
+-- for _, lang in ipairs(wanted) do
+-- 	local parser_config = parsers.get_parser_configs()[lang]
+-- 	if parser_config and not parsers.has_parser(lang) then
+-- 		install.commands.TSInstall(lang)
+-- 	end
+-- end
+------------------- Load snippets ---------------------------
