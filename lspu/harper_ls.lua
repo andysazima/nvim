@@ -1,6 +1,6 @@
 return {
 	filetypes = {
-		"bash",
+		-- "bash",
 		"cmake",
 		"diablo",
 		"gitcommit",
@@ -11,7 +11,7 @@ return {
 		"markdown",
 		"plaintex",
 		"plaintext",
-		"python",
+		-- "python",
 		"rust",
 		"sh",
 		"tex",
