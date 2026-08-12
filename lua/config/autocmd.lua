@@ -18,16 +18,16 @@ autocmd({ "TextYankPost" }, {
 
 -- Set filetype for various AEAG groups (and bash)
 local group_set_syntax = augroup("group_set_syntax", {})
-autocmd({ "BufNewFile", "BufRead" }, {
-	group = group_set_syntax,
-	pattern = { "*.tg", "*.part", "*.lc", "*.mtrl", "*.key", "*.ig", "trugrdi" },
-	callback = function() set.filetype = "ingrid" end,
-})
-autocmd({ "BufNewFile", "BufRead" }, {
-	group = group_set_syntax,
-	pattern = { "*.assembly*", "*.subassembly*", "*.diablo*", "*.dbl*" },
-	callback = function() set.filetype = "diablo" end,
-})
+-- autocmd({ "BufNewFile", "BufRead" }, {
+-- 	group = group_set_syntax,
+-- 	pattern = { "*.tg", "*.part", "*.lc", "*.mtrl", "*.key", "*.ig", "trugrdi" },
+-- 	callback = function() set.filetype = "ingrid" end,
+-- })
+-- autocmd({ "BufNewFile", "BufRead" }, {
+-- 	group = group_set_syntax,
+-- 	pattern = { "*.assembly*", "*.subassembly*", "*.diablo*", "*.dbl*" },
+-- 	callback = function() set.filetype = "diablo" end,
+-- })
 autocmd({ "BufNewFile", "BufRead" }, {
 	group = group_set_syntax,
 	pattern = { "*.bash*" },
