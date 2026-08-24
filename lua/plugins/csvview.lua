@@ -24,4 +24,8 @@ return {
 		},
 	},
 	cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
+	keys = {
+		{ "<leader>cc", "<cmd>CsvViewToggle<CR>", mode = "n", noremap = true, desc = "Toggle CSV View" },
+		{ "<leader>ci", "<cmd>CsvViewInfo<CR>", mode = "n", noremap = true, desc = "See CSV Info" },
+	},
 }

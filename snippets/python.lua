@@ -29,51 +29,42 @@ local k = require("luasnip.nodes.key_indexer").new_key
 
 return {
 	s({ trig = "#md", snippetType = "autosnippet" }, {
-		t({
-			"# %% [markdown]",
-			'"""',
-			"",
+		c(1, {
+			sn(nil, {
+				t({ "# %% [markdown]", 'r"""', "" }),
+				i(1),
+				t({ "", '"""', "" }),
+				i(0),
+			}),
+			sn(nil, {
+				t({ "# %% [markdown]", '"""', "" }),
+				i(1),
+				t({ "", '"""', "" }),
+				i(0),
+			}),
 		}),
-		i(1),
-		t({
-			"",
-			'"""',
-			"",
-		}),
-		i(2),
 	}),
 	s({ trig = "#py", snippetType = "autosnippet" }, {
-		t({
-			"# %%",
-			"",
-		}),
-		i(1),
-		t({
-			"",
-			"",
-		}),
-		i(2),
+		t({ "# %%", "" }),
 	}),
 	s({ trig = "#re", snippetType = "autosnippet" }, {
 		c(1, {
 			sn(nil, {
-				t("# %%"),
-				t({ "", "# %%render", "" }),
-				i(1, ""),
+				t({ "# %%", "# %%render", "" }),
+				i(1),
 			}),
 			sn(nil, {
 				t("# %%"),
 				t({ "", "set_params_columns(" }),
 				i(1, "3"),
 				t({ ")", "", "# %%", "# %%render params", "" }),
+				i(0),
 			}),
 			sn(nil, {
-				t("# %%"),
-				t({ "", "# %%render long", "" }),
-				i(1, ""),
+				t({ "# %%", "# %%render long", "" }),
+				i(1),
 			}),
 		}),
-		i(0),
 	}),
 	-- s({ trig = "#re", snippetType = "autosnippet" }, {
 	-- 	t("# %%"),
